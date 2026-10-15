@@ -1,16 +1,16 @@
 // Todo o texto do site, em PT e EN. A marcação usa data-i18n="chave".
 window.I18N = {
-  "meta.title": { pt: "Ares — Desenvolvedor Back-end", en: "Ares — Back-end Developer" },
+  "meta.title": { pt: "Guilherme Dantas (Ares) — Desenvolvedor Back-end", en: "Guilherme Dantas (Ares) — Back-end Developer" },
   "meta.description": {
-    pt: "Portfólio de Ares, desenvolvedor back-end em Python e Go: APIs, tempo real e integrações, com testes em cada etapa.",
-    en: "Portfolio of Ares, a back-end developer in Python and Go: APIs, real-time systems and integrations, tested at every step."
+    pt: "Portfólio de Guilherme Dantas (Ares), desenvolvedor back-end em Python e Go: APIs, tempo real e integrações, com testes em cada etapa.",
+    en: "Portfolio of Guilherme Dantas (Ares), a back-end developer in Python and Go: APIs, real-time systems and integrations, tested at every step."
   },
   "lang.label": { pt: "Idioma", en: "Language" },
   "nav.projects": { pt: "Projetos", en: "Projects" },
   "nav.stack": { pt: "Stack", en: "Stack" },
   "nav.contact": { pt: "Contato", en: "Contact" },
 
-  "hero.hi": { pt: "Oi! Eu sou Ares", en: "Hi! I’m Ares" },
+  "hero.hi": { pt: "Oi! Eu sou Guilherme Dantas (Ares)", en: "Hi! I’m Guilherme Dantas (Ares)" },
   "hero.role": { pt: "Desenvolvedor Back-end · Python · Go", en: "Back-end Developer · Python · Go" },
   "hero.pitch": {
     pt: "Construo sistemas que rodam de verdade: APIs, tempo real e integrações, com testes em cada etapa.",
@@ -18,7 +18,7 @@ window.I18N = {
   },
   "hero.status": { pt: "Aberto a oportunidades de back-end", en: "Open to back-end opportunities" },
   "hero.cta": { pt: "Ver projetos", en: "See projects" },
-  "hero.photoAlt": { pt: "Foto de Ares", en: "Photo of Ares" },
+  "hero.photoAlt": { pt: "Foto de Guilherme Dantas", en: "Photo of Guilherme Dantas" },
 
   "about.title": { pt: "Sobre", en: "About" },
   "about.p1": {
@@ -88,8 +88,8 @@ window.I18N = {
     en: "The full source of these projects lives in private repositories. I can give read access for a technical review or walk through everything in an interview."
   },
   "footer": {
-    pt: "© 2026 Ares. Feito com HTML, CSS e JavaScript puro.",
-    en: "© 2026 Ares. Built with plain HTML, CSS and JavaScript."
+    pt: "© 2026 Guilherme Dantas (Ares). Feito com HTML, CSS e JavaScript puro.",
+    en: "© 2026 Guilherme Dantas (Ares). Built with plain HTML, CSS and JavaScript."
   },
   "zone.tag": { pt: "Chamadas de voz, chat e um escritório virtual 2D para equipes pequenas", en: "Voice calls, chat and a 2D virtual office for small teams" },
   "zone.problem": { pt: "Eu e dois amigos queríamos conversar por texto e voz sem depender de serviços grandes. Virou um sistema em tempo real em uso por três pessoas, no navegador e em app Windows, com um escritório virtual 2D incluso.", en: "Two friends and I wanted to talk by text and voice without relying on big services. It became a real-time system used by three people, in the browser and as a Windows app, with a 2D virtual office included." },
