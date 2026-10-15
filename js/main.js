@@ -83,11 +83,47 @@
     });
   }
 
+  // Lightbox: a miniatura abre na mesma pagina, com X, Esc e clique no fundo para sair.
+  function setupLightbox() {
+    var box = document.getElementById("lightbox");
+    var img = document.getElementById("lb-img");
+    if (!box || !img || typeof box.showModal !== "function") return; // sem suporte: o link abre a imagem normalmente
+    var stage = box.querySelector(".lb-stage");
+    var closeBtn = box.querySelector(".lb-close");
+
+    function open(link) {
+      var thumb = link.querySelector("img");
+      img.alt = thumb ? thumb.alt : "";
+      stage.classList.remove("tall");
+      stage.scrollTop = 0;
+      img.onload = function () {
+        stage.classList.toggle("tall", img.naturalHeight / img.naturalWidth > 1.2);
+      };
+      img.src = link.getAttribute("href");
+      box.showModal();
+    }
+
+    document.querySelectorAll(".track a").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; // deixa abrir em outra aba se pedir
+        e.preventDefault();
+        open(a);
+      });
+    });
+
+    closeBtn.addEventListener("click", function () { box.close(); });
+    box.addEventListener("click", function (e) {
+      if (e.target === box || e.target === stage) box.close();
+    });
+    box.addEventListener("close", function () { img.removeAttribute("src"); });
+  }
+
   document.querySelectorAll(".lang button").forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
   });
 
   setupPhoto();
   setupCarousels();
+  setupLightbox();
   apply(initialLang());
 })();

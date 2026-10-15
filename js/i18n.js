@@ -56,6 +56,8 @@ window.I18N = {
   "p.prev": { pt: "Anterior", en: "Previous" },
   "p.next": { pt: "Próxima", en: "Next" },
   "p.shots": { pt: "Capturas de tela", en: "Screenshots" },
+  "lb.label": { pt: "Imagem ampliada", en: "Enlarged image" },
+  "lb.close": { pt: "Fechar", en: "Close" },
 
   "method.title": { pt: "Como eu trabalho", en: "How I work" },
   "method.sub": { pt: "O mesmo ciclo em todos os projetos acima.", en: "The same loop across every project above." },

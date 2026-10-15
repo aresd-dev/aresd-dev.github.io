@@ -5,7 +5,8 @@ Falha (exit 1) se:
   - uma chave do dicionário não é usada em lugar nenhum (HTML ou main.js);
   - um src/href local não resolve para um arquivo existente;
   - um link externo está fora da lista esperada;
-  - um <img> não tem width/height ou loading=lazy (exceto a foto do hero).
+  - um <img> com src não tem width/height, loading=lazy ou alt traduzido (exceto a foto do hero);
+  - uma miniatura de projeto tem target (deve abrir no visualizador, não em outra aba).
 Uso: python tests/check_site.py
 """
 import re
@@ -34,6 +35,7 @@ class Collector(HTMLParser):
         self.keys = []      # (attr, key)
         self.refs = []      # (tag, attr, value)
         self.imgs = []      # atributos de cada <img>
+        self.blank_img_links = []  # <a href=img/...> com target (deve ficar vazio)
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
@@ -43,6 +45,8 @@ class Collector(HTMLParser):
         for name in ("src", "href"):
             if name in a:
                 self.refs.append((tag, name, a[name]))
+        if tag == "a" and a.get("href", "").startswith("img/") and a.get("target"):
+            self.blank_img_links.append(a["href"])
         if tag == "img":
             self.imgs.append(a)
 
@@ -97,7 +101,7 @@ def main():
     # 4) imagens com dimensões e lazy-load (exceto foto do hero)
     for a in col.imgs:
         src = a.get("src", "")
-        if src in OPTIONAL:
+        if src in OPTIONAL or "src" not in a:
             continue
         if not (a.get("width") and a.get("height")):
             errors.append(f"<img> sem width/height: {src}")
@@ -105,6 +109,12 @@ def main():
             errors.append(f"<img> sem loading=lazy: {src}")
         if not a.get("data-i18n-alt"):
             errors.append(f"<img> sem alt traduzido: {src}")
+
+    # 5) miniaturas abrem no visualizador da propria pagina: sem target (nova aba)
+    for href in col.blank_img_links:
+        errors.append(f"link de imagem com target (abre em outra aba): {href}")
+    if "id=\"lightbox\"" not in html:
+        errors.append("visualizador de imagens (#lightbox) ausente")
 
     if errors:
         print(f"FALHOU: {len(errors)} problema(s)")
