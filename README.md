@@ -1,4 +1,4 @@
-# Portfólio de Guilherme Dantas (Ares) — Desenvolvedor Back-end
+# Portfólio de (Ares) Guilherme Dantas — Desenvolvedor Back-end
 
 Site estático (HTML, CSS e JavaScript puro, sem build) em **PT e EN**, pensado para o GitHub Pages
 do repositório `aresd-dev.github.io`. Estrutura inspirada no site de Yudi Ganeko: hero, timeline com
@@ -57,4 +57,4 @@ tests/check_site.py
 Quando quiser: crie o repositório `aresd-dev/aresd-dev.github.io` no GitHub e envie esta pasta;
 o GitHub Pages serve a raiz da branch principal.
 
-© 2026 Guilherme Dantas (Ares). Imagens e textos dos projetos: todos os direitos reservados.
+© 2026 (Ares) Guilherme Dantas. Imagens e textos dos projetos: todos os direitos reservados.
