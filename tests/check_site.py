@@ -6,9 +6,11 @@ Falha (exit 1) se:
   - um src/href local não resolve para um arquivo existente;
   - um link externo está fora da lista esperada;
   - um <img> com src não tem width/height, loading=lazy ou alt traduzido (exceto a foto do hero);
-  - uma miniatura de projeto tem target (deve abrir no visualizador, não em outra aba).
+  - uma miniatura de projeto tem target (deve abrir no visualizador, não em outra aba);
+  - um CSS/JS do index.html está sem ?v= ou com versão diferente do conteúdo atual.
 Uso: python tests/check_site.py
 """
+import hashlib
 import re
 import sys
 
@@ -27,6 +29,11 @@ ALLOWED_EXTERNAL_PREFIXES = (
     "https://fonts.gstatic.com",
 )
 I18N_ATTRS = ("data-i18n", "data-i18n-alt", "data-i18n-aria")
+
+
+def content_hash(path):
+    """Mesmo cálculo de tools/versionar.py (fim de linha normalizado)."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()[:8]
 
 
 class Collector(HTMLParser):
@@ -95,8 +102,13 @@ def main():
             if not value.startswith(ALLOWED_EXTERNAL_PREFIXES):
                 errors.append(f"link externo inesperado: {value}")
         else:
-            if value not in OPTIONAL and not (ROOT / value).exists():
-                errors.append(f"arquivo local não existe: {value}")
+            path, _, query = value.partition("?")
+            if path not in OPTIONAL and not (ROOT / path).exists():
+                errors.append(f"arquivo local não existe: {path}")
+            elif path.endswith((".css", ".js")):
+                expected = "v=" + content_hash(ROOT / path)
+                if query != expected:
+                    errors.append(f"versão desatualizada em {path} (tem '{query}', esperado '{expected}'): rode python tools/versionar.py")
 
     # 4) imagens com dimensões e lazy-load (exceto foto do hero)
     for a in col.imgs:

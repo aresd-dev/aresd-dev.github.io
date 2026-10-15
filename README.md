@@ -15,11 +15,23 @@ python -m http.server 8000
 
 ```bash
 python tests/check_site.py
+tools/versionar.py  # versão (?v=hash) dos links de CSS/JS
 ```
 
 Falha se: uma chave `data-i18n*` não existir em `js/i18n.js` ou faltar `pt`/`en`; houver chave
 do dicionário sem uso; um `src`/`href` local não resolver; um link externo estiver fora da lista
 esperada; ou uma imagem estiver sem `width`/`height`, `loading="lazy"` ou alt traduzido.
+
+**Antes de commitar mudanças em `css/` ou `js/`:**
+
+```bash
+python tools/versionar.py
+```
+
+Ele coloca `?v=<hash do conteúdo>` nos links de CSS/JS do `index.html`. O GitHub Pages deixa o
+navegador guardar cada arquivo por 10 min; com a versão na URL, quem volta ao site recebe o
+arquivo novo na hora, em vez de misturar HTML novo com JS antigo. O checker falha se a versão
+estiver desatualizada.
 
 ## Estrutura
 
