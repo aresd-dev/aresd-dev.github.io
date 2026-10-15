@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ares — Desenvolvedor Back-end</title>
+  <meta name="description" content="Portfólio de Ares, desenvolvedor back-end em Python e Go: APIs, tempo real e integrações, com testes em cada etapa.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">aresd<span>.</span>dev</a>
+      <nav>
+        <a class="hide-sm" href="#projetos" data-i18n="nav.projects">Projetos</a>
+        <a class="hide-sm" href="#stack" data-i18n="nav.stack">Stack</a>
+        <a class="hide-sm" href="#contato" data-i18n="nav.contact">Contato</a>
+        <div class="lang" role="group" data-i18n-aria="lang.label" aria-label="Idioma">
+          <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+      <div class="hero">
+        <div class="avatar" id="avatar">
+          <span class="initials" aria-hidden="true">A</span>
+          <img id="foto" src="img/foto.jpg" alt="" data-i18n-alt="hero.photoAlt" width="220" height="275" hidden>
+        </div>
+        <div>
+          <h1 data-i18n="hero.hi">Oi! Eu sou Ares</h1>
+          <p class="role" data-i18n="hero.role">Desenvolvedor Back-end · Python · Go</p>
+          <p class="pitch" data-i18n="hero.pitch">Construo sistemas que rodam de verdade: APIs, tempo real e integrações, com testes em cada etapa.</p>
+          <div class="status" data-i18n="hero.status">Aberto a oportunidades de back-end</div>
+          <div class="links">
+            <a class="btn primary" href="#projetos" data-i18n="hero.cta">Ver projetos</a>
+            <a class="btn" href="https://github.com/aresd-dev" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/aresd-dev" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="mailto:aresd.dev@gmail.com">E-mail</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="about" id="sobre">
+        <h2 data-i18n="about.title">Sobre</h2>
+        <p data-i18n="about.p1">Desenvolvo projetos completos, do banco de dados ao deploy, e os uso de verdade. Meu foco é back-end: regras de negócio, persistência, tempo real e integração com APIs de terceiros.</p>
+        <p data-i18n="about.p2">Gosto de decisões explicadas, testes que verificam comportamento e infraestrutura do tamanho do problema. Abaixo estão os quatro projetos que melhor mostram isso.</p>
+      </section>
+
+      <section id="stack">
+        <h2 data-i18n="stack.title">Stack</h2>
+        <p class="sub" data-i18n="stack.sub">Só o que está provado nos projetos abaixo.</p>
+        <dl class="stack">
+          <div class="stack-row"><dt data-i18n="stack.lang">Linguagens</dt><dd><span class="chip hi">Python</span><span class="chip hi">Go</span><span class="chip">TypeScript</span><span class="chip">SQL</span></dd></div>
+          <div class="stack-row"><dt data-i18n="stack.back">Back-end</dt><dd><span class="chip hi">FastAPI</span><span class="chip">Pydantic</span><span class="chip">gorilla/websocket</span><span class="chip">REST</span></dd></div>
+          <div class="stack-row"><dt data-i18n="stack.data">Dados</dt><dd><span class="chip hi">PostgreSQL</span><span class="chip">SQLite</span><span class="chip">FTS5</span><span class="chip" data-i18n="stack.migrations">migrações versionadas</span></dd></div>
+          <div class="stack-row"><dt data-i18n="stack.rt">Tempo real</dt><dd><span class="chip">WebSocket</span><span class="chip">WebRTC</span><span class="chip">TURN</span></dd></div>
+          <div class="stack-row"><dt data-i18n="stack.sec">Segurança</dt><dd><span class="chip">JWT</span><span class="chip" data-i18n="stack.refresh">refresh token rotativo</span><span class="chip">OAuth 2.0 + PKCE</span><span class="chip">Fernet</span><span class="chip">scrypt</span><span class="chip">CSRF</span><span class="chip">SSRF</span></dd></div>
+          <div class="stack-row"><dt data-i18n="stack.infra">Infra</dt><dd><span class="chip">Docker multi-stage</span><span class="chip">Render</span><span class="chip">Cloudflare</span><span class="chip">PyInstaller</span></dd></div>
+          <div class="stack-row"><dt data-i18n="stack.tests">Testes</dt><dd><span class="chip hi">pytest</span><span class="chip hi">go test</span><span class="chip">Vitest</span><span class="chip" data-i18n="stack.realBrowser">testes em navegador real</span></dd></div>
+        </dl>
+      </section>
+
+      <section id="projetos">
+        <h2 data-i18n="projects.title">Projetos</h2>
+        <p class="sub" data-i18n="projects.sub">Projetos pessoais, completos e em uso. O código completo é privado; cada vitrine pública mostra arquitetura, decisões e trechos reais.</p>
+        <div class="timeline">
+
+      <article class="entry featured" id="proj-zone">
+        <div class="entry-side">
+          <p class="name">Zone</p>
+          <span class="when" data-i18n="zone.when">SET–OUT 2026</span>
+        </div>
+        <div class="entry-main">
+        <span class="badge" data-i18n="p.featured">Destaque</span>
+        <h3>Zone</h3>
+        <p class="tagline" data-i18n="zone.tag">Chamadas de voz, chat e um escritório virtual 2D para equipes pequenas</p>
+        <div class="carousel">
+          <button class="car-btn prev" type="button" data-i18n-aria="p.prev" aria-label="Anterior">‹</button>
+          <div class="track" tabindex="0" role="region" data-i18n-aria="p.shots" aria-label="Capturas de tela">
+            <a href="img/projetos/zone/zone-chamada.png" target="_blank" rel="noopener"><img src="img/projetos/zone/zone-chamada.png" width="1440" height="900" loading="lazy" decoding="async" data-i18n-alt="zone.img1" alt="Chamada de voz do Zone com tela compartilhada no palco e o menu de opções de uma pessoa aberto"></a>
+            <a href="img/projetos/zone/zone-inicio-ao-vivo.png" target="_blank" rel="noopener"><img src="img/projetos/zone/zone-inicio-ao-vivo.png" width="1440" height="900" loading="lazy" decoding="async" data-i18n-alt="zone.img2" alt="Início do Zone com uma transmissão ao vivo em destaque e a lista de Zonas com quem está em voz"></a>
+            <a href="img/projetos/zone/zone-chat-wafu.png" target="_blank" rel="noopener"><img src="img/projetos/zone/zone-chat-wafu.png" width="1440" height="900" loading="lazy" decoding="async" data-i18n-alt="zone.img3" alt="Canal de texto do Zone no estilo Wafū, com reações, mensagem editada e quem está na sala de voz"></a>
+            <a href="img/projetos/zone/escritorio-conversa.png" target="_blank" rel="noopener"><img src="img/projetos/zone/escritorio-conversa.png" width="1440" height="900" loading="lazy" decoding="async" data-i18n-alt="zone.img4" alt="Escritório virtual 2D: duas pessoas conversam por proximidade e uma terceira está na sala de reunião"></a>
+          </div>
+          <button class="car-btn next" type="button" data-i18n-aria="p.next" aria-label="Próxima">›</button>
+        </div>
+        <p class="problem"><strong data-i18n="p.problem">O problema</strong> <span data-i18n="zone.problem">Eu e dois amigos queríamos conversar por texto e voz sem depender de serviços grandes. Virou um sistema em tempo real em uso por três pessoas, no navegador e em app Windows, com um escritório virtual 2D incluso.</span></p>
+        <ul class="bullets">
+          <li data-i18n="zone.b1">Separei responsabilidades em duas linguagens, com a regra “uma regra, um dono”: Python (FastAPI) decide contas, permissões e persistência no PostgreSQL; Go cuida de WebSocket, presença e sinalização; o cliente só envia intenções, nunca estado final.</li>
+          <li data-i18n="zone.b2">Projetei sessões com refresh token rotativo em cookie HttpOnly: só o hash fica no banco e a família inteira de tokens é revogada se um token antigo for reutilizado.</li>
+          <li data-i18n="zone.b3">Eliminei sinais WebRTC atrasados que religavam áudio já fechado, usando gerações e IDs por sessão, contexto e transmissão: o que é antigo é descartado.</li>
+          <li data-i18n="zone.b4">Mantive a infraestrutura proporcional: um único serviço Docker multi-stage no Render, mídia P2P com TURN da Cloudflare e sem Redis, filas ou servidor de mídia, porque para três pessoas não se justificam.</li>
+          <li data-i18n="zone.b5">Verifiquei com mais de 2.800 testes automatizados (Go, Python, Vitest e fluxos reais no navegador), rodando a regressão inteira a cada etapa antes de avançar.</li>
+        </ul>
+        <p class="arch"><strong data-i18n="p.arch">Arquitetura</strong> <span data-i18n="zone.arch">Navegador ou app Windows → gateway Go (site, /api, WebSocket) → API Python (FastAPI) → PostgreSQL; o escritório é um módulo Go com o mundo autoritativo, e os dois módulos só se falam por contrato HTTP/WebSocket.</span></p>
+        <p class="metrics" data-i18n="zone.metrics">~32 mil linhas de código · ~40 mil linhas de testes · 2.800+ testes · 3 pessoas usando</p>
+        <div class="tags"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Go</span><span class="chip">WebSocket</span><span class="chip">WebRTC</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">Render</span><span class="chip">React/TS</span></div>
+        <div class="entry-links">
+          <a class="btn primary" href="https://github.com/aresd-dev/zone-portfolio" target="_blank" rel="noopener" data-i18n="p.showcase">Vitrine no GitHub →</a>
+          <a class="btn" href="mailto:aresd.dev@gmail.com?subject=Acesso%20ao%20codigo%20/%20Code%20access%3A%20Zone" data-i18n="p.access">Pedir acesso ao código</a>
+        </div>
+        </div>
+      </article>
+
+      <article class="entry" id="proj-postador">
+        <div class="entry-side">
+          <p class="name">Postador</p>
+          <span class="when">2026</span>
+        </div>
+        <div class="entry-main">
+        <h3>Postador</h3>
+        <p class="tagline" data-i18n="postador.tag">Agende uma vez, publique em todas as redes</p>
+        <div class="carousel">
+          <button class="car-btn prev" type="button" data-i18n-aria="p.prev" aria-label="Anterior">‹</button>
+          <div class="track" tabindex="0" role="region" data-i18n-aria="p.shots" aria-label="Capturas de tela">
+            <a href="img/projetos/postador/inicio.png" target="_blank" rel="noopener"><img src="img/projetos/postador/inicio.png" width="1280" height="900" loading="lazy" decoding="async" data-i18n-alt="postador.img1" alt="Tela inicial do Postador"></a>
+            <a href="img/projetos/postador/fila.png" target="_blank" rel="noopener"><img src="img/projetos/postador/fila.png" width="1280" height="1150" loading="lazy" decoding="async" data-i18n-alt="postador.img2" alt="Fila de posts agendados por conta"></a>
+            <a href="img/projetos/postador/calendario.png" target="_blank" rel="noopener"><img src="img/projetos/postador/calendario.png" width="1280" height="1000" loading="lazy" decoding="async" data-i18n-alt="postador.img3" alt="Calendário mensal com o status de cada post por cor"></a>
+            <a href="img/projetos/postador/lote.png" target="_blank" rel="noopener"><img src="img/projetos/postador/lote.png" width="1280" height="950" loading="lazy" decoding="async" data-i18n-alt="postador.img4" alt="Criação de vários posts de uma vez a partir de vários arquivos"></a>
+          </div>
+          <button class="car-btn next" type="button" data-i18n-aria="p.next" aria-label="Próxima">›</button>
+        </div>
+        <p class="problem"><strong data-i18n="p.problem">O problema</strong> <span data-i18n="postador.problem">Cada rede social tem as suas regras e cuidar de várias contas vira trabalho repetitivo. O Postador agenda e publica em LinkedIn, Instagram, YouTube, TikTok e X usando só as APIs oficiais, num .exe para Windows. Começou como um script em Python e foi reescrito do zero.</span></p>
+        <ul class="bullets">
+          <li data-i18n="postador.b1">Integrei 5 APIs oficiais atrás de uma interface comum (validate, publish, OAuth): uma classe por rede, então adicionar uma rede nova é escrever uma classe.</li>
+          <li data-i18n="postador.b2">Resolvi o redirect HTTPS exigido pelo OAuth num app local com uma página-ponte estática no GitHub Pages que repassa code e state, com state de uso único e PKCE.</li>
+          <li data-i18n="postador.b3">Garanti que nunca publica duas vezes: a seleção do agendador é uma função pura, o claim no SQLite é atômico e, se o app cai no meio do envio, o post vai para “conferir” em vez de repetir sozinho.</li>
+          <li data-i18n="postador.b4">Implementei retentativas após 1, 5 e 15 min só para erros temporários, recuperação de posts perdidos com o PC desligado e upload em partes com retomada em cada rede.</li>
+          <li data-i18n="postador.b5">Protegi tokens com Fernet, o acesso remoto com scrypt e sessão assinada, e a interface com limite de tentativas e checagem de origem (CSRF) e de Host (DNS rebinding).</li>
+          <li data-i18n="postador.b6">Cobri tudo com 123 testes em pytest sem nenhuma chamada real de rede: o HTTP de cada rede é simulado com responses.</li>
+        </ul>
+        <p class="arch"><strong data-i18n="p.arch">Arquitetura</strong> <span data-i18n="postador.arch">Interface FastAPI + Jinja2 → serviço de posts com validação por rede → SQLite com tokens criptografados; agendador em thread → publishers (uma classe por rede) → APIs oficiais.</span></p>
+        <p class="metrics" data-i18n="postador.metrics">~4.500 linhas de Python · 123 testes · 5 redes com várias contas cada</p>
+        <div class="tags"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">OAuth 2.0 + PKCE</span><span class="chip">Fernet</span><span class="chip">pytest</span><span class="chip">PyInstaller</span></div>
+        <div class="entry-links">
+          <a class="btn primary" href="https://github.com/aresd-dev/postador" target="_blank" rel="noopener" data-i18n="p.showcase">Vitrine no GitHub →</a>
+          <a class="btn" href="mailto:aresd.dev@gmail.com?subject=Acesso%20ao%20codigo%20/%20Code%20access%3A%20Postador" data-i18n="p.access">Pedir acesso ao código</a>
+        </div>
+        </div>
+      </article>
+
+      <article class="entry" id="proj-shiori">
+        <div class="entry-side">
+          <p class="name">Shiori</p>
+          <span class="when">2026</span>
+        </div>
+        <div class="entry-main">
+        <h3>Shiori</h3>
+        <p class="tagline" data-i18n="shiori.tag">Da folha do caderno para o Obsidian, com IA local</p>
+        <div class="carousel">
+          <button class="car-btn prev" type="button" data-i18n-aria="p.prev" aria-label="Anterior">‹</button>
+          <div class="track" tabindex="0" role="region" data-i18n-aria="p.shots" aria-label="Capturas de tela">
+            <a href="img/projetos/shiori/inicio.png" target="_blank" rel="noopener"><img src="img/projetos/shiori/inicio.png" width="1280" height="1053" loading="lazy" decoding="async" data-i18n-alt="shiori.img1" alt="Foto da página do caderno ao lado da transcrição revisável"></a>
+            <a href="img/projetos/shiori/analise.png" target="_blank" rel="noopener"><img src="img/projetos/shiori/analise.png" width="1280" height="1443" loading="lazy" decoding="async" data-i18n-alt="shiori.img2" alt="Análise que separa os assuntos da página"></a>
+            <a href="img/projetos/shiori/notas.png" target="_blank" rel="noopener"><img src="img/projetos/shiori/notas.png" width="1280" height="1955" loading="lazy" decoding="async" data-i18n-alt="shiori.img3" alt="Notas por assunto e destino de cada trecho no vault"></a>
+            <a href="img/projetos/shiori/realce.png" target="_blank" rel="noopener"><img src="img/projetos/shiori/realce.png" width="1340" height="624" loading="lazy" decoding="async" data-i18n-alt="shiori.img4" alt="Realce de imagem: original, cinza com luz corrigida e preto e branco"></a>
+          </div>
+          <button class="car-btn next" type="button" data-i18n-aria="p.next" aria-label="Próxima">›</button>
+        </div>
+        <p class="problem"><strong data-i18n="p.problem">O problema</strong> <span data-i18n="shiori.problem">Anotações à mão ficam esquecidas no papel, e OCR na nuvem expõe dados pessoais. O Shiori lê fotos de páginas com um modelo local (Ollama), separa os assuntos e só publica no vault do Obsidian depois da revisão.</span></p>
+        <ul class="bullets">
+          <li data-i18n="shiori.b1">Fiz o modelo classificar e o código decidir: a página é dividida de forma determinística, a IA diz só assunto e categoria de cada bloco, e as regras de junção e validação ficam no código.</li>
+          <li data-i18n="shiori.b2">Medi em 31 fotos reais com gabarito: a leitura concluída subiu de 9/31 para 28/31 ao trocar JSON por texto puro com penalidade de repetição, e as fronteiras de assunto de 9/30 para 22/30.</li>
+          <li data-i18n="shiori.b3">Cada clique vira uma tarefa persistente numa fila SQLite idempotente com worker único: repetir o clique não duplica e um resultado antigo nunca sobrescreve uma edição mais nova.</li>
+          <li data-i18n="shiori.b4">Fiz a publicação ser transacional: manifesto gravado antes de qualquer arquivo, hardlink exclusivo que nunca sobrescreve, troca atômica e desfazer que confere hashes e recusa a operação se o usuário editou depois.</li>
+          <li data-i18n="shiori.b5">Corrigi um bug real (uma nota saiu com título e resumo de outra página, porque a memória enviava notas inteiras como exemplo) e deixei um teste de regressão; também bloqueei SSRF no verificador web e validei os caminhos do vault.</li>
+          <li data-i18n="shiori.b6">Cobri com 160 testes em pytest, com o HTTP do Ollama, do Gemini e da pesquisa simulado por httpx.MockTransport e o painel testado com streamlit.testing.</li>
+        </ul>
+        <p class="arch"><strong data-i18n="p.arch">Arquitetura</strong> <span data-i18n="shiori.arch">Painel Streamlit → fila SQLite de tarefas idempotentes → worker único → segmentação + tarefas de IA (Ollama local) → publicador com manifesto e hashes → vault do Obsidian.</span></p>
+        <p class="metrics" data-i18n="shiori.metrics">~3.200 linhas de Python · 160 testes · 31 fotos reais medidas</p>
+        <div class="tags"><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">Pydantic</span><span class="chip">httpx</span><span class="chip">Ollama</span><span class="chip">Streamlit</span><span class="chip">pytest</span></div>
+        <div class="entry-links">
+          <a class="btn primary" href="https://github.com/aresd-dev/shiori" target="_blank" rel="noopener" data-i18n="p.showcase">Vitrine no GitHub →</a>
+          <a class="btn" href="mailto:aresd.dev@gmail.com?subject=Acesso%20ao%20codigo%20/%20Code%20access%3A%20Shiori" data-i18n="p.access">Pedir acesso ao código</a>
+        </div>
+        </div>
+      </article>
+
+      <article class="entry" id="proj-washi">
+        <div class="entry-side">
+          <p class="name">Washi</p>
+          <span class="when">2026</span>
+        </div>
+        <div class="entry-main">
+        <h3>Washi</h3>
+        <p class="tagline" data-i18n="washi.tag">Mesa de trabalho digital local-first: hábitos, kanban, notas e um quadro infinito</p>
+        <div class="carousel">
+          <button class="car-btn prev" type="button" data-i18n-aria="p.prev" aria-label="Anterior">‹</button>
+          <div class="track" tabindex="0" role="region" data-i18n-aria="p.shots" aria-label="Capturas de tela">
+            <a href="img/projetos/washi/mesa-clara.png" target="_blank" rel="noopener"><img src="img/projetos/washi/mesa-clara.png" width="2400" height="1350" loading="lazy" decoding="async" data-i18n-alt="washi.img1" alt="Mesa do Washi no tema claro"></a>
+            <a href="img/projetos/washi/formas-e-conectores.png" target="_blank" rel="noopener"><img src="img/projetos/washi/formas-e-conectores.png" width="2250" height="495" loading="lazy" decoding="async" data-i18n-alt="washi.img2" alt="Formas, texto e setas conectadas no quadro infinito"></a>
+            <a href="img/projetos/washi/habitos.png" target="_blank" rel="noopener"><img src="img/projetos/washi/habitos.png" width="645" height="1200" loading="lazy" decoding="async" data-i18n-alt="washi.img3" alt="Grade de hábitos com sequência e progresso"></a>
+            <a href="img/projetos/washi/mesa-escura.png" target="_blank" rel="noopener"><img src="img/projetos/washi/mesa-escura.png" width="2400" height="1350" loading="lazy" decoding="async" data-i18n-alt="washi.img4" alt="Mesa do Washi no tema escuro"></a>
+          </div>
+          <button class="car-btn next" type="button" data-i18n-aria="p.next" aria-label="Próxima">›</button>
+        </div>
+        <p class="problem"><strong data-i18n="p.problem">O problema</strong> <span data-i18n="washi.problem">Eu queria um único espaço para hábitos, projetos e rabiscos, sem guardar meus dados na nuvem de alguém. Os dados do Washi ficam em arquivos comuns (Markdown, JSON) no próprio computador.</span></p>
+        <ul class="bullets">
+          <li data-i18n="washi.b1">Separei um núcleo Python/FastAPI, que guarda as regras de negócio e o acesso a disco, de uma interface React que só desenha e envia intenções, ligados por um canal local autenticado e isolado da rede.</li>
+          <li data-i18n="washi.b2">Garanti a integridade dos dados com escrita atômica, registro de operações, recuperação de arquivo truncado após queda de energia e backups automáticos com rotação.</li>
+          <li data-i18n="washi.b3">Implementei um reconhecedor geométrico de gestos que decide se o traço sobre um quadradinho é ✓, ✗ ou rabisco, com tolerância para grades apertadas.</li>
+          <li data-i18n="washi.b4">Fiz a interface otimista: mover, desenhar e marcar respondem na hora, o disco confirma em segundo plano e há desfazer (Ctrl+Z).</li>
+          <li data-i18n="washi.b5">Cobri o núcleo com 111 testes (tipagem estrita e lint) e a interface com 32 verificações em navegador real, que acharam falhas de interação que todos os testes unitários deixavam passar.</li>
+        </ul>
+        <p class="arch"><strong data-i18n="p.arch">Arquitetura</strong> <span data-i18n="washi.arch">Interface React + TypeScript → canal local autenticado → núcleo Python/FastAPI → vault no disco (Markdown · JSON · JSONL); um shell Electron inicia e vigia o núcleo.</span></p>
+        <p class="metrics" data-i18n="washi.metrics">111 testes no núcleo · 32 verificações em navegador real</p>
+        <div class="tags"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Pydantic v2</span><span class="chip">React/TS</span><span class="chip">Electron</span><span class="chip">pytest</span><span class="chip">mypy</span><span class="chip">Playwright</span></div>
+        <div class="entry-links">
+          <a class="btn primary" href="https://github.com/aresd-dev/washi-vitrine" target="_blank" rel="noopener" data-i18n="p.showcase">Vitrine no GitHub →</a>
+          <a class="btn" href="mailto:aresd.dev@gmail.com?subject=Acesso%20ao%20codigo%20/%20Code%20access%3A%20Washi" data-i18n="p.access">Pedir acesso ao código</a>
+        </div>
+        </div>
+      </article>
+<!--PROJECTS-->
+        </div>
+      </section>
+
+      <section id="trabalho">
+        <h2 data-i18n="method.title">Como eu trabalho</h2>
+        <p class="sub" data-i18n="method.sub">O mesmo ciclo em todos os projetos acima.</p>
+        <ul class="method">
+          <li><strong data-i18n="method.1t">Em fatias pequenas</strong><span data-i18n="method.1d">Implemento a menor parte que entrega o comportamento, testo isolado, integro e rodo a regressão antes de avançar.</span></li>
+          <li><strong data-i18n="method.2t">Bug vira teste</strong><span data-i18n="method.2d">Quando viável, o teste falha antes da correção e passa depois, e fica na suíte.</span></li>
+          <li><strong data-i18n="method.3t">Teste não se enfraquece</strong><span data-i18n="method.3d">Nunca apago nem pulo um teste só para ficar verde: se o requisito mudou, atualizo e registro o motivo.</span></li>
+          <li><strong data-i18n="method.4t">Relato com precisão</strong><span data-i18n="method.4d">Separo o que está implementado, testado e validado em uso real, e digo o que ainda depende do ambiente real.</span></li>
+        </ul>
+      </section>
+
+      <section id="contato">
+        <h2 data-i18n="contact.title">Contato</h2>
+        <div class="contact-card">
+          <p data-i18n="contact.text">O código completo dos projetos fica em repositórios privados. Posso dar acesso de leitura para avaliação técnica ou mostrar tudo numa entrevista.</p>
+          <div class="links">
+            <a class="btn primary" href="mailto:aresd.dev@gmail.com">aresd.dev@gmail.com</a>
+            <a class="btn" href="https://github.com/aresd-dev" target="_blank" rel="noopener">github.com/aresd-dev</a>
+            <a class="btn" href="https://www.linkedin.com/in/aresd-dev" target="_blank" rel="noopener">linkedin.com/in/aresd-dev</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" data-i18n="footer">© 2026 Ares. Feito com HTML, CSS e JavaScript puro.</div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
