@@ -115,6 +115,9 @@ def main():
         errors.append(f"link de imagem com target (abre em outra aba): {href}")
     if "id=\"lightbox\"" not in html:
         errors.append("visualizador de imagens (#lightbox) ausente")
+    for part in ("lb-nav prev", "lb-nav next", "lb-count", "lb-close"):
+        if f'class="{part}"' not in html:
+            errors.append(f"visualizador sem controle: {part}")
 
     if errors:
         print(f"FALHOU: {len(errors)} problema(s)")
